@@ -109,8 +109,8 @@ export async function AvailabilityChanges(id:Product['id']) {
     try {
         const url = import.meta.env.VITE_URL + `/api/products/${id}`;
 
-        const {data} = await axios.patch(url);
-        
+        await axios.patch(url);
+
     } catch (error) {
         console.log(error);
 
